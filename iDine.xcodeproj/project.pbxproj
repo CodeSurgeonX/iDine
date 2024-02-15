@@ -11,6 +11,10 @@
 		BC36DC9D2B7E832C009FA119 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC36DC9C2B7E832C009FA119 /* ContentView.swift */; };
 		BC36DC9F2B7E832E009FA119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC36DC9E2B7E832E009FA119 /* Assets.xcassets */; };
 		BC36DCA22B7E832E009FA119 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC36DCA12B7E832E009FA119 /* Preview Assets.xcassets */; };
+		BC36DCA92B7E84C7009FA119 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC36DCA82B7E84C7009FA119 /* Helper.swift */; };
+		BC36DCAD2B7E84EC009FA119 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC36DCAA2B7E84EC009FA119 /* Order.swift */; };
+		BC36DCAE2B7E84EC009FA119 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC36DCAB2B7E84EC009FA119 /* Menu.swift */; };
+		BC36DCAF2B7E84EC009FA119 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = BC36DCAC2B7E84EC009FA119 /* menu.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		BC36DC9C2B7E832C009FA119 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC36DC9E2B7E832E009FA119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC36DCA12B7E832E009FA119 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC36DCA82B7E84C7009FA119 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BC36DCAA2B7E84EC009FA119 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		BC36DCAB2B7E84EC009FA119 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		BC36DCAC2B7E84EC009FA119 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,9 @@
 			children = (
 				BC36DC9A2B7E832C009FA119 /* iDineApp.swift */,
 				BC36DC9C2B7E832C009FA119 /* ContentView.swift */,
+				BC36DCB02B7E8523009FA119 /* Models */,
+				BC36DCB22B7E853C009FA119 /* Data */,
+				BC36DCB12B7E852E009FA119 /* Helpers */,
 				BC36DC9E2B7E832E009FA119 /* Assets.xcassets */,
 				BC36DCA02B7E832E009FA119 /* Preview Content */,
 			);
@@ -65,6 +76,31 @@
 				BC36DCA12B7E832E009FA119 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC36DCB02B7E8523009FA119 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC36DCAB2B7E84EC009FA119 /* Menu.swift */,
+				BC36DCAA2B7E84EC009FA119 /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC36DCB12B7E852E009FA119 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC36DCA82B7E84C7009FA119 /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BC36DCB22B7E853C009FA119 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BC36DCAC2B7E84EC009FA119 /* menu.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC36DCAF2B7E84EC009FA119 /* menu.json in Resources */,
 				BC36DCA22B7E832E009FA119 /* Preview Assets.xcassets in Resources */,
 				BC36DC9F2B7E832E009FA119 /* Assets.xcassets in Resources */,
 			);
@@ -139,6 +176,9 @@
 			files = (
 				BC36DC9D2B7E832C009FA119 /* ContentView.swift in Sources */,
 				BC36DC9B2B7E832C009FA119 /* iDineApp.swift in Sources */,
+				BC36DCAD2B7E84EC009FA119 /* Order.swift in Sources */,
+				BC36DCA92B7E84C7009FA119 /* Helper.swift in Sources */,
+				BC36DCAE2B7E84EC009FA119 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
