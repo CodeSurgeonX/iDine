@@ -16,11 +16,12 @@ struct ContentView: View {
                 ForEach(menu) { section in
                     // Section Name - Generally we use header
                     
-                    // This helps adds section in views like form picker and list
+                    // This helps adds section in views like form, picker and list
                     Section(section.name) {
                         // Section Items
                         ForEach(section.items) { item  in
-                            Text(item.name)
+                            // Custom View, Very Fast
+                            ItemRow(item: item)
                         }
                     }
 
