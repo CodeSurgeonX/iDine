@@ -8,17 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    let menu = Bundle.main.decode([MenuSection].self, from: "menu.json")
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(menu) { section in
+                    // Section Name - Generally we use header
+                    
+                    // This helps adds section in views like form picker and list
+                    Section(section.name) {
+                        // Section Items
+                        ForEach(section.items) { item  in
+                            Text(item.name)
+                        }
+                    }
+
+                }
+            }
+            .navigationTitle("Menu")
+            .navigationBarTitleDisplayMode(.automatic)
+            .listStyle(.grouped)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
+
+// Identifiable : Identify which row is which
