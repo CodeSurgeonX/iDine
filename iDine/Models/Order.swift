@@ -8,8 +8,10 @@
 
 import SwiftUI
 
-class Order {
-    var items = [MenuItem]()
+//Observable Object is needed with order in-order to reload for any changes, we want this if we want to use it as @StateObject
+class Order: ObservableObject {
+    // @Published marks the properties which when changed a event would be fired to all observing entities, this is necessary to create the reactive pipeline
+    @Published var items = [MenuItem]()
 
     var total: Int {
         if items.count > 0 {
