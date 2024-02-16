@@ -14,6 +14,7 @@ struct CheckoutView: View {
     @State private var addLoyaltyDetails = false
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 15
+    @State private var showingPaymentAlert = false
     
     let tipAmounts = [10,15,20,25,0]
     let paymentTypes = [
@@ -50,7 +51,7 @@ struct CheckoutView: View {
     
     var totalView: some View {
         Button(action: {
-            print("Ordering now, please stay calm")
+            showingPaymentAlert = true
         }, label: {
             Text("Confirm Order")
         })
@@ -81,6 +82,14 @@ struct CheckoutView: View {
         }
         .navigationTitle("Payment")
         .navigationBarTitleDisplayMode(.inline)
+        // The string in alert is the title
+        .alert("Order is confirmed", isPresented: $showingPaymentAlert) {
+            // Add alert buttons here the custom ones
+            // SwiftUI automatically adds okay button
+            // That default okay button would make sure it does all the right actions to dismiss the alert
+        } message: {
+            Text("Your total was \(finalAmount) - Thank you! :) ")
+        }
     }
 }
 
