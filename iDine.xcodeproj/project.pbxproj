@@ -15,6 +15,7 @@
 		BC36DCAD2B7E84EC009FA119 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC36DCAA2B7E84EC009FA119 /* Order.swift */; };
 		BC36DCAE2B7E84EC009FA119 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC36DCAB2B7E84EC009FA119 /* Menu.swift */; };
 		BC36DCAF2B7E84EC009FA119 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = BC36DCAC2B7E84EC009FA119 /* menu.json */; };
+		BCBF4B152B7F57D0005ECFBC /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBF4B142B7F57D0005ECFBC /* ItemDetail.swift */; };
 		BCE10B812B7E90C500BE00A4 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE10B802B7E90C400BE00A4 /* ItemRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		BC36DCAA2B7E84EC009FA119 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		BC36DCAB2B7E84EC009FA119 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		BC36DCAC2B7E84EC009FA119 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		BCBF4B142B7F57D0005ECFBC /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		BCE10B802B7E90C400BE00A4 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				BC36DC9A2B7E832C009FA119 /* iDineApp.swift */,
 				BC36DC9C2B7E832C009FA119 /* ContentView.swift */,
 				BCE10B802B7E90C400BE00A4 /* ItemRow.swift */,
+				BCBF4B142B7F57D0005ECFBC /* ItemDetail.swift */,
 				BC36DCB02B7E8523009FA119 /* Models */,
 				BC36DCB22B7E853C009FA119 /* Data */,
 				BC36DCB12B7E852E009FA119 /* Helpers */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCBF4B152B7F57D0005ECFBC /* ItemDetail.swift in Sources */,
 				BC36DC9D2B7E832C009FA119 /* ContentView.swift in Sources */,
 				BC36DC9B2B7E832C009FA119 /* iDineApp.swift in Sources */,
 				BC36DCAD2B7E84EC009FA119 /* Order.swift in Sources */,
