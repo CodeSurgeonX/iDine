@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ItemDetail: View {
     let item: MenuItem
+    // Expect you will be getting environment object. Is it interoperable between UIKit and SwiftUI.
+    // Risk of crashing, if not found. Dangerous to use carelessly
+    @EnvironmentObject var order: Order
     
     var body: some View {
         VStack {
@@ -25,6 +28,13 @@ struct ItemDetail: View {
                     .offset(x: -5, y:-5)
             }
             Text(item.description)
+            
+            
+            Button("Order This") {
+                order.add(item: self.item)
+            }
+            .buttonStyle(.borderedProminent)
+            
             Spacer()
         }
         .navigationTitle(item.name)
@@ -36,5 +46,6 @@ struct ItemDetail: View {
 #Preview("iPhone 15 Pro") {
     NavigationStack {
         ItemDetail(item: MenuItem.example)
+            .environmentObject(Order())
     }
 }
