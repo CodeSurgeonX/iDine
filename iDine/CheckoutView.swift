@@ -49,7 +49,18 @@ struct CheckoutView: View {
     }
     
     var totalView: some View {
-        Color.red
+        Button(action: {
+            print("Ordering now, please stay calm")
+        }, label: {
+            Text("Confirm Order")
+        })
+    }
+    
+    var finalAmount: String {
+        let orderValue = Double(order.total)
+        let tipValue = (orderValue * Double(tipAmount))/100
+        // Ideally I would want to check the locale from device and accordingly get the country and then format it
+        return (orderValue + tipValue).formatted(.currency(code: "USD"))
     }
     
     var body: some View {
@@ -64,7 +75,7 @@ struct CheckoutView: View {
                 tipView
             }
             
-            Section("Total") {
+            Section("Total: \(self.finalAmount)") {
                 totalView
             }
         }
