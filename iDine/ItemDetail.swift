@@ -33,31 +33,8 @@ struct ItemDetail: View {
     }
 }
 
-
-struct ItemDetailPreviews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            NavigationStack {
-                ItemDetail(item: MenuItem.example)
-                    .preferredColorScheme(.dark)
-                    .previewInterfaceOrientation(.portrait)
-                    .previewDisplayName("iPhone 15")
-                    .previewDevice("iPhone 15 Pro")
-                    .previewDevice(PreviewDevice(rawValue: "iPhone 15"))
-
-            }
-            
-            
-            NavigationStack {
-                ItemDetail(item: MenuItem.example)
-                    .preferredColorScheme(.light)
-                    .previewInterfaceOrientation(.portrait)
-                    .previewLayout(.device)
-                    .previewDisplayName("iPhoneSE")
-                    .previewDevice("iPhone SE (3rd generation)")
-                    .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
-
-            }
-        }
+#Preview("iPhone 15 Pro") {
+    NavigationStack {
+        ItemDetail(item: MenuItem.example)
     }
 }
